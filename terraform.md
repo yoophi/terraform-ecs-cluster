@@ -141,7 +141,7 @@ resource "aws_vpc" "mesh-vpc" {
   cidr_block = "10.0.0.0/16"
   enable_dns_hostnames = "true"
 
-  tags {
+  tags = {
     Name = "mesh-vpc"
   }
 }
@@ -159,7 +159,7 @@ resource "aws_subnet" "mesh-vpc-subnet1" {
     cidr_block = "10.0.0.0/24"
     availability_zone = "us-east-1a"
 
-    tags {
+    tags = {
         Name = "mesh-vpc-subnet"
     }
 }
@@ -167,9 +167,9 @@ resource "aws_subnet" "mesh-vpc-subnet1" {
 resource "aws_subnet" "mesh-vpc-subnet2" {
     vpc_id     = "${aws_vpc.mesh-vpc.id}"
     cidr_block = "10.0.1.0/24"
-    availability_zone = "us-east-1b"
+    availability_zone = "us-east-1c"
 
-    tags {
+    tags = {
         Name = "mesh-vpc-subnet"
     }
 }

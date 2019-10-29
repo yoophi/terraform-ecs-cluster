@@ -6,7 +6,7 @@ resource "aws_route_table" "mesh-vpc-route-table" {
     gateway_id = "${aws_internet_gateway.mesh-vpc-internet-gateway.id}"
   }
 
-  tags {
+  tags = {
     Name = "mesh-vpc-route-table"
   }
 }
