@@ -34,7 +34,3 @@ resource "aws_security_group" "mesh-vpc-security-group" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
-output "security-group-id" {
-  value = "${aws_security_group.mesh-vpc-security-group.id}"
-}
