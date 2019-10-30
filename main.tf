@@ -26,7 +26,7 @@ module "ec2" {
 module "ecs" {
   source = "./ecs"
 
-  ecs-cluster-name       = "${var.ecs-cluster-name}"
-  ecs-target-group-arn   = "${module.ec2.ecs-target-group-arn}"
-  ecs-service-role-arn   = "${module.iam.ecs-service-role-arn}"
+  ecs-cluster-name     = "${var.ecs-cluster-name}"
+  ecs-target-group-arn = "${module.ec2.ecs-target-group-arn}"
+  ecs-service-role-arn = "${module.iam.ecs-service-role-arn}"
 }
